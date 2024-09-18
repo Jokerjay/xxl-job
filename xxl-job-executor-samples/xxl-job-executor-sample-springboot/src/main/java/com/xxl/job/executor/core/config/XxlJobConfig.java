@@ -1,5 +1,6 @@
 package com.xxl.job.executor.core.config;
 
+import com.xxl.job.core.executor.impl.XxlJobDubboExecutor;
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,9 +43,9 @@ public class XxlJobConfig {
 
 
     @Bean
-    public XxlJobSpringExecutor xxlJobExecutor() {
+    public XxlJobDubboExecutor xxlJobExecutor() {
         logger.info(">>>>>>>>>>> xxl-job config init.");
-        XxlJobSpringExecutor xxlJobSpringExecutor = new XxlJobSpringExecutor();
+        XxlJobDubboExecutor xxlJobSpringExecutor = new XxlJobDubboExecutor();
         xxlJobSpringExecutor.setAdminAddresses(adminAddresses);
         xxlJobSpringExecutor.setAppname(appname);
         xxlJobSpringExecutor.setAddress(address);

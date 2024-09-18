@@ -1,5 +1,7 @@
 package com.xxl.job.core.handler.annotation;
 
+import org.apache.dubbo.config.annotation.DubboService;
+
 import java.lang.annotation.*;
 
 /**
@@ -10,6 +12,7 @@ import java.lang.annotation.*;
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
+@DubboService
 public @interface XxlJob {
 
     /**
